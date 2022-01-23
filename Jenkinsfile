@@ -2,8 +2,8 @@ pipeline {
 
   environment {
     app = "webapp"
-    environment = "prod"
-    namespace = "prod"
+    environment = "perf"
+    namespace = "perf"
   }
   agent any
 
