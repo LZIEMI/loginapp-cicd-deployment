@@ -2,8 +2,8 @@ pipeline {
 
   environment {
     app = "webapp"
-    environment = "dev"
-    namespace = "dev"
+    environment = "qa"
+    namespace = "qa"
   }
   agent any
 
