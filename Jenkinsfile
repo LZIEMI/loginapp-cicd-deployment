@@ -20,7 +20,7 @@ pipeline {
          
            dir("charts"){
              withCredentials([usernamePassword(credentialsId: 'jfrog', usernameVariable: 'username', passwordVariable: 'password')]) {
-                    sh 'sudo /usr/local/bin/helm repo add dpt3-helm-local  https://valdpt3.jfrog.io/artifactory/dpt3-helm-local --username $username --password $password'
+                    sh 'sudo /usr/local/bin/helm repo add dft01-helm-local  https://dpt4hub.jfrog.io/artifactory/dft01-helm-local --username $username --password $password'
                     sh "sudo /usr/local/bin/helm repo update"
                     sh "sudo /usr/local/bin/helm upgrade ${app}-${environment} --install --namespace ${namespace} --force -f values.yaml ."
                     sh "sudo /usr/local/bin/helm list -a --namespace ${namespace}"
